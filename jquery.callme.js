@@ -10,7 +10,8 @@
 			slideopen: true,
 			buttontext: "loading...",
 			buttontextready: "Call me",
-			numbertodial: "app:9991457008"
+			numbertodial: "app:9991457008",
+			headers: []
     	};
     	
     	if(options) {
@@ -202,6 +203,7 @@
     		call = phono.phone.dial(settings.numbertodial, {
             	tones: true,
                 callerId: settings.callerid,
+                headers: settings.headers,
             	onAnswer: function(event) {	
 				    phoneBtn.text("Hangup");
             	},
